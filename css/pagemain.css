@@ -1,0 +1,383 @@
+/* -----------------------
+Base styles
+------------------------*/
+@import url(https://fonts.googleapis.com/css?family=Vesper+Libre:400,500,700,900);
+
+body
+{
+	margin: 0;
+	padding: 0;
+	color: #333;
+	background-color: #eee;
+	font: 1em/1.2 'Vesper Libre', Helvetica, Arial, Geneva, sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+	margin: 0 0 .5em;
+	font-weight: 500;
+	line-height: 1.1;
+}
+
+h1 { font-size: 2.25em; text-align:center; } /* 36px */
+h2 { font-size: 1.75em; } /* 28px */
+h3 { font-size: 1.375em; } /* 22px */
+h4 { font-size: 1.125em; } /* 18px */
+h5 { font-size: 1em; } /* 16px */
+h6 { font-size: .875em; } /* 14px */
+
+p
+{
+	margin: 0 0 1.5em;
+	line-height: 1.5;
+	padding: 0em 1.5em;
+}
+
+blockquote
+{
+	padding: 1em 2em;
+	margin: 0 0 2em;
+	border-left: 5px solid #eee;
+}
+
+hr
+{
+	height: 0;
+	margin-top: 1em;
+	margin-bottom: 2em;
+	border: 0;
+	border-top: 1px solid #ddd;
+}
+
+table
+{
+	background-color: transparent;
+	border-spacing: 0;
+	border-collapse: collapse;
+	border-top: 1px solid #ddd;
+}
+
+th, td
+{
+	padding: .5em 1em;
+	vertical-align: top;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+}
+
+a:link { color: royalblue; }
+a:visited { color: purple; }
+a:focus { color: black; }
+a:active { color: red; }
+
+/* -----------------------
+Layout styles
+------------------------*/
+
+.container
+{
+	max-width: 50em;
+	margin: 0 auto;
+	background-color: #fff;
+}
+
+.header
+{
+	color: #000;
+	background: #fff;
+	text-align:center;
+}
+
+.header-heading { margin: 0; }
+
+.nav-bar
+{
+	background: #fff;
+	color: #000;
+	padding: 0;
+	text-align:center;
+}
+
+.content { padding: 1em 1.25em; }
+
+.content a {color:#5a99d4;text-decoration:none;}
+
+.content a:hover {text-decoration:underline;}
+.footer
+{
+	color: #fff;
+	background: #000;
+	padding: 1em 1.25em;
+}
+
+/* -----------------------
+Nav
+------------------------*/
+
+.nav
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.nav li
+{
+	display: inline;
+	margin: 0;
+}
+
+.nav a
+{
+	display: block;
+	padding: .7em 1.25em;
+	color: #b22700;
+	text-decoration: none;
+	border-bottom: 1px solid gray;
+}
+
+.nav a:link { color: #b22700; }
+.nav a:visited { color: #b22700; }
+
+.nav a:focus
+{
+	color: black;
+	background-color: white;
+}
+
+.nav a:hover
+{
+	color: #eb6741;
+	background-color: white;
+}
+
+.nav a:active
+{
+	color: black;
+	background-color: transparent;
+}
+/* Social Links */
+.soc {
+    overflow:hidden;
+    margin:0; padding:0;
+    list-style:none;
+}
+
+.soc li {
+    display:inline-block;
+    *display:inline;
+    zoom:1;
+}
+
+.soc li a {
+
+    overflow:hidden;
+    text-decoration:none;
+    text-align:center;
+    display:block;
+    position: relative;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    margin-right: 0.5em;
+    color: #ffffff;
+    background-color: none;
+}
+
+.soc-icon-last{
+    margin:0 !important;
+}
+img.nocolor {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: gray; /* IE 6-9 */
+  filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' height='0'><filter id='greyscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0' /></filter></svg>#greyscale");
+  transition: 0.3s;
+}
+img.nocolor:hover {
+  filter: none;
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  -ms-filter: grayscale(0%);
+  -o-filter: grayscale(0%);
+}
+
+/*Contact form */
+
+#contact {
+  overflow: auto;
+}
+#contact #form {
+  width:295px;
+  margin: 0 auto;
+}
+#contact #form h2 {
+  font: 48px Georgia, Helvetica, serif;
+}
+#contact #form span {
+  display:block;
+  float:left;
+  width:100px;
+  padding-top:5px;
+  font: 14px/16px Georgia, Helvetica, serif;
+}
+#contact #form input {
+  float:left;
+  width:255px;
+  border:0px;
+  color:#F1F1F1;
+  padding:8px 10px 8px 30px;
+  font: 11px/20px Georgia, Helvetica, serif;
+  margin-bottom:10px;
+}
+#contact #form textarea {
+  float:left;
+  border:0px;
+  width:255px;
+  height:140px;
+  padding:5px 10px 5px 30px;
+  font: 11px/20px Georgia, Helvetica, serif;
+  color:#F1F1F1;
+  resize: none;
+}
+#contact #form input.name {
+  background:#222222 url(../img/icons/profile.png) no-repeat 10px 8px;
+}
+#contact #form input.email {
+  background:#222222 url(../img/icons/email.png) no-repeat 10px 9px;
+}
+#contact #form input.captcha {
+  background:#222222 url(../img/icons/captcha.png) no-repeat 10px 9px;
+}
+#contact #form textarea.message {
+  background:#222222 url(../img/icons/message.png) no-repeat 10px 8px;
+}
+#contact #form input.submit {
+  cursor: pointer;
+  width:100px;
+  float:right;
+  height:30px;
+  padding:0px 0px 5px 0px;
+  margin:10px 5px;
+  background:#222222;
+  color:#F1F1F1;
+  font: 14px/16px Georgia, Helvetica, serif;
+}
+#contact #captcha span{
+  width: 44px;
+}
+#contact #captcha input{
+  background: url(../img/icons/captcha.png) no-repeat scroll 0 0 transparent;
+  margin: 5px 0 0;
+  padding: 0;
+  border: medium none;
+  cursor: pointer;
+  width: 15px;
+}
+
+/* -----------------------
+Single styles
+------------------------*/
+
+.img-responsive { max-width: 100%; }
+
+.btn
+{
+	color: #fff !important;
+	background-color: royalblue;
+	border-color: #222;
+	display: inline-block;
+	padding: .5em 1em;
+	margin-bottom: 0;
+	font-weight: 400;
+	line-height: 1.2;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	border: 1px solid transparent;
+	border-radius: .2em;
+	text-decoration: none;
+}
+
+.btn:hover
+{
+	color: #fff !important;
+	background-color: green;
+}
+
+.btn:focus
+{
+	color: #fff !important;
+	background-color: black;
+}
+
+.btn:active
+{
+	color: #fff !important;
+	background-color: red;
+}
+
+.table
+{
+	width: 100%;
+	max-width: 100%;
+	margin-bottom: 20px;
+}
+
+.list-unstyled
+{
+	padding-left: 0;
+	list-style: none;
+}
+
+.list-inline
+{
+	padding-left: 0;
+	margin-left: -5px;
+	list-style: none;
+}
+
+.list-inline > li
+{
+	display: inline-block;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+.photoalbumcontainer {}
+/* -----------------------
+Wide styles
+------------------------*/
+
+@media (min-width: 42em)
+{
+	.header { padding: .5em 3em;position:relative; }
+	.nav-bar { padding: 0em 0em; }
+	.content { padding: .5em 3em; }
+	.footer { padding: .5em 3em; }
+.soc {
+	position:absolute;
+	top:0.5em;
+	right:1em;
+}	
+	.nav li
+	{
+		display: inline;
+		margin: 0 1em 0 0;
+	}
+	
+	.nav a
+	{
+		display: inline;
+		padding: 0;
+		border-bottom: 0;
+	}
+}
